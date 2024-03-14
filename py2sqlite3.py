@@ -2,6 +2,7 @@ import sqlite3
 conn = sqlite3.connect('teater.db')
 
 conn.execute("DELETE FROM Sal")
+conn.execute("DELETE FROM Sete")
 
 # Setter inn sal 1 (Hovedscenen) og sal 2 (Gamle scene) inn i Sal-tabellen
 conn.execute("INSERT INTO Sal (salID, totaltAntallSeter) \
@@ -17,7 +18,7 @@ for stolnr in range(0, 524):
     if stolnr < 505:
         område = "galleri"
     conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) \
-                    VALUES (?, ?, ?, 2)", (stolnr+1, (stolnr//28) + 1, område))
+                    VALUES (?, ?, ?, 1)", (stolnr+1, (stolnr//28) + 1, område))
 
 # Setter inn seter i sal 2 (Lille Scene) i Sete-tabellen
 
