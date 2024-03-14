@@ -11,13 +11,17 @@ conn.execute("INSERT INTO Sal (salID, totaltAntallSeter) \
             VALUES (2, 332)")
 
 # Setter inn seter i sal 1 (Hovedscenen) i Sete-tabellen
-for stolnr in range(0, 524):
+for stolnr in range(1, 525):
     område = "parkett"
-    if (stolnr > 467 and stolnr < 472) or (stolnr > 495 and stolnr < 500):
+    radnr = ((stolnr-1)//28) + 1
+    if (stolnr > 466 and stolnr < 471) or (stolnr > 494 and stolnr < 499):
         continue
-    if stolnr < 505:
+    if stolnr > 504:
         område = "galleri"
-    conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) VALUES (?, ?, ?, 1)", (stolnr+1, (stolnr//28) + 1, område))
+        radnr = ((504//28) + 1) + ((stolnr-505)//5)
+
+    print(stolnr, radnr, område)
+    conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) VALUES (?, ?, ?, 1)", (stolnr, radnr, område))
 
 # Setter inn seter i sal 2 (Lille Scene) i Sete-tabellen
 
