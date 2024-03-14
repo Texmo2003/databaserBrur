@@ -17,8 +17,7 @@ for stolnr in range(0, 524):
         continue
     if stolnr < 505:
         område = "galleri"
-    conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) \
-                    VALUES (?, ?, ?, 1)", (stolnr+1, (stolnr//28) + 1, område))
+    conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) VALUES (?, ?, ?, 1)", (stolnr+1, (stolnr//28) + 1, område))
 
 # Setter inn seter i sal 2 (Lille Scene) i Sete-tabellen
 
@@ -28,8 +27,7 @@ omraader = ["parkett", "balkong", "galleri"]
 for omraade in range(len(gamlescene)):
     for rad in range(len(gamlescene[omraade])):
         for stolnr in range(0, int(gamlescene[omraade][rad])):
-            conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) \
-                #VALUES (?, ?, ?, 2)", (stolnr+1, rad+1, omraader[omraade]))
+            conn.execute("INSERT INTO Sete (stolNr, radNr, område, salID) VALUES (?, ?, ?, 2)", (stolnr+1, rad+1, omraader[omraade]))
             print(rad, omraader[omraade], stolnr+1)
 
 conn.commit()
