@@ -63,9 +63,7 @@ CREATE TABLE Sete (
 
 CREATE TABLE Sal (
     salID VARCHAR(250) PRIMARY KEY,
-    totaltAntallSeter INT,
-    stykkeID VARCHAR(250),
-    FOREIGN KEY (stykkeID) REFERENCES Stykke(stykkeID)
+    totaltAntallSeter INT
 );
 
 CREATE TABLE Billettgruppe (

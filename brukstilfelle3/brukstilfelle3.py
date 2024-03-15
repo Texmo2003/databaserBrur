@@ -12,7 +12,7 @@ c.execute('''
         FROM Billett INNER JOIN Ordre ON Billett.ordreID = Ordre.ordreID
         WHERE Ordre.stykkeID = "Størst av alt er kjærligheten" AND Ordre.forestillingDato = '2024-02-03'
     ) AS ReserverteSeter ON ReserverteSeter.stolNr = Sete.stolNr AND ReserverteSeter.radNr = Sete.radNr AND ReserverteSeter.område = Sete.område AND ReserverteSeter.salID = Sete.salID
-    WHERE ReserverteSeter.stolNr IS NULL AND Sete.salID = (SELECT salID FROM Sal WHERE stykkeID = "Størst av alt er kjærligheten")
+    WHERE ReserverteSeter.stolNr IS NULL AND Sete.salID = (SELECT salID FROM Stykke WHERE stykkeID = "Størst av alt er kjærligheten")
     GROUP BY Sete.radNr, Sete.område
     HAVING COUNT(*) >= 9
     ORDER BY Sete.område, Sete.radNr
