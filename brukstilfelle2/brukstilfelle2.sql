@@ -1,5 +1,5 @@
-DELETE FROM Ordre;
-DELETE FROM Billett;
+DELETE FROM Ordre WHERE ordreID = 1 OR ordreID = 2;
+DELETE FROM Billett WHERE ordreID = 1 OR ordreID = 2;
 DELETE FROM Kunde WHERE kundeid = 69;
 
 -- Dummy kunde

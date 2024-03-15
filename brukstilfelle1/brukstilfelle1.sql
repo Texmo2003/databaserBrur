@@ -12,8 +12,8 @@ DELETE FROM TeaterAnsatt;
 DELETE FROM HarRolle;
 DELETE FROM HarOppgave;
 
-INSERT INTO Sal (salID, totaltAntallSeter) VALUES ('Hovedscenen', 0);
-INSERT INTO Sal (salID, totaltAntallSeter) VALUES ('Gamle Scene', 0);
+INSERT INTO Sal (salID, totaltAntallSeter, stykkeID) VALUES ('Hovedscenen', 0, 'Kongsemnene');
+INSERT INTO Sal (salID, totaltAntallSeter, stykkeID) VALUES ('Gamle Scene', 0, 'Størst av alt er kjærligheten');
 
 INSERT INTO Stykke (stykkeID, forBarn, klokkeslett, salID) VALUES ('Kongsemnene', false, '19:00', 'Hovedscenen');
 INSERT INTO Stykke (stykkeID, forBarn, klokkeslett, salID) VALUES ('Størst av alt er kjærligheten', true, '18:30', 'Gamle Scene');

@@ -44,8 +44,8 @@ with open("filesNeeded/gamle-scene.txt") as file:
         if line[0] != "1" and line[0] != "0":
             continue
         for stol in range(0, len(line)-1):
-            stolnr += 1
             c.execute("INSERT INTO Sete (stolNr, radNr, område, salID) VALUES (?, ?, ?, 'Gamle Scene')", (stolnr, radnr, omraade))
+            stolnr += 1
         radnr += 1
         stolnr = 1
 

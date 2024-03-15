@@ -46,10 +46,10 @@ with open("filesNeeded/gamle-scene.txt") as file:
         if line[0] != "1" and line[0] != "0":
             continue
         for stol in range(0, len(line)-1):
-            stolnr += 1
             if line[stol] == "1":
                 amtTickets += 1
                 c.execute("INSERT INTO Billett (billettNr, ordreID, gruppeNavn, stolNr, radNr, område, salID) VALUES (?, 2, 'Ordinær', ?, ?, ?, 'Gamle Scene')", (amtTickets, stolnr, radnr, omraade))
+            stolnr += 1
         radnr += 1
         stolnr = 1
     c.execute("UPDATE Ordre SET antallBilletter = ? WHERE ordreID = 2", (amtTickets,))
