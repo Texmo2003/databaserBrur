@@ -11,5 +11,6 @@ Trenger en forklaring på hvordan man kjører databasen i python
   - Databasetabellene er fortsatt på fjerde normalform, siden ingen ikke-trivielle funksjonelle avhengigheter ble generert av dette.
 
 ## Antagelser
+
 - Antar at Guttorm Ingesson er Baard Bratte.
 - Antar at Trønder er med i akt 1
