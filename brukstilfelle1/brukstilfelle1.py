@@ -24,6 +24,7 @@ with open("filesNeeded/hovedscenen.txt") as file:
                 continue
             c.execute("INSERT INTO Sete (stolNr, radNr, område, salID) VALUES (?, ?, ?, 'Hovedscenen')", (stolnr, radnr, omraade))
         radnr += 1
+c.execute("UPDATE Sal SET totaltAntallSeter = (SELECT COUNT(*) FROM SETE WHERE salID = 'Hovedscenen') WHERE salID = 'Hovedscenen'")
 
 
 # Setter inn seter i Gamle Scene i Sete-tabellen og billetter for opptatte seter i Billett-tabellen
@@ -48,6 +49,7 @@ with open("filesNeeded/gamle-scene.txt") as file:
             stolnr += 1
         radnr += 1
         stolnr = 1
+c.execute("UPDATE Sal SET totaltAntallSeter = (SELECT COUNT(*) FROM SETE WHERE salID = 'Gamle Scene') WHERE salID = 'Gamle Scene'")
 
 conn.commit()
 conn.close()
