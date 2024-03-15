@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS HarOppgave;
 DROP TABLE IF EXISTS HarRolle;
 DROP TABLE IF EXISTS FinnesIAkt;
-DROP TABLE IF EXISTS OppgaverIStykke;
 DROP TABLE IF EXISTS PrisForForestilling;
 DROP TABLE IF EXISTS TeaterAnsatt;
 DROP TABLE IF EXISTS Rolle;
@@ -10,8 +9,8 @@ DROP TABLE IF EXISTS Oppgave;
 DROP TABLE IF EXISTS Forestilling;
 DROP TABLE IF EXISTS Stykke;
 DROP TABLE IF EXISTS Billettgruppe;
-DROP TABLE IF EXISTS Sal;
 DROP TABLE IF EXISTS Sete;
+DROP TABLE IF EXISTS Sal;
 DROP TABLE IF EXISTS Billett;
 DROP TABLE IF EXISTS Ordre;
 DROP TABLE IF EXISTS Kunde;
@@ -30,7 +29,7 @@ CREATE TABLE Ordre (
     antallBilletter INT,
     kundeID INT,
     forestillingDato DATE,
-    stykkeID INT,
+    stykkeID VARCHAR(250),
     FOREIGN KEY (kundeID) REFERENCES Kunde(kundeID),
 	FOREIGN KEY (forestillingDato) REFERENCES Forestilling(forestillingDato),
 	FOREIGN KEY (stykkeID) REFERENCES Forestilling(stykkeID)
@@ -43,7 +42,7 @@ CREATE TABLE Billett (
     stolNr INT,
     radNr INT,
     område VARCHAR(50),
-    salID INT,
+    salID VARCHAR(250),
 	PRIMARY KEY (billettNr, ordreID),
     FOREIGN KEY (ordreID) REFERENCES Ordre(ordreID),
     FOREIGN KEY (gruppeNavn) REFERENCES Billettgruppe(gruppeNavn),
@@ -57,13 +56,13 @@ CREATE TABLE Sete (
     stolNr INT,
     radNr INT,
     område VARCHAR(50),
-    salID INT,
+    salID VARCHAR(250),
     PRIMARY KEY (stolNr, radNr, område, salID),
     FOREIGN KEY (salID) REFERENCES Sal(salID)
 );
 
 CREATE TABLE Sal (
-    salID INT PRIMARY KEY,
+    salID VARCHAR(250) PRIMARY KEY,
     totaltAntallSeter INT
 );
 
@@ -72,36 +71,37 @@ CREATE TABLE Billettgruppe (
 );
 
 CREATE TABLE Stykke (
-    stykkeID INT PRIMARY KEY,
+    stykkeID VARCHAR(250) PRIMARY KEY,
     forBarn BOOLEAN,
     klokkeslett TIME,
-    salID INT,
+    salID VARCHAR(250),
     FOREIGN KEY (salID) REFERENCES Sal(salID)
 );
 
 CREATE TABLE Forestilling (
     forestillingDato DATE,
-    stykkeID INT,
+    stykkeID VARCHAR(250),
 	PRIMARY KEY (forestillingDato, stykkeID),
     FOREIGN KEY (stykkeID) REFERENCES Stykke(stykkeID)
 );
 
 CREATE TABLE Oppgave (
-    oppgaveID INT PRIMARY KEY,
-    oppgaveNavn VARCHAR(100)
+    oppgaveNavn VARCHAR(100),
+    stykkeID VARCHAR(250),
+    PRIMARY KEY (oppgaveNavn, stykkeID),
+    FOREIGN KEY (stykkeID) REFERENCES Stykke(stykkeID)
 );
 
 CREATE TABLE Akt (
     aktNr INT,
-    stykkeID INT,
+    stykkeID VARCHAR(250),
     navn VARCHAR(100) NULL,
 	PRIMARY KEY (aktNr, stykkeID),
     FOREIGN KEY (stykkeID) REFERENCES Stykke(stykkeID)
 );
 
 CREATE TABLE Rolle (
-    rolleID INT PRIMARY KEY,
-    navn VARCHAR(100)
+    navn VARCHAR(100) PRIMARY KEY
 );
 
 CREATE TABLE TeaterAnsatt (
@@ -113,7 +113,7 @@ CREATE TABLE TeaterAnsatt (
 );
 
 CREATE TABLE PrisForForestilling (
-    stykkeID INT,
+    stykkeID VARCHAR(250),
     gruppeNavn VARCHAR(100),
     pris DECIMAL(10,2),
     PRIMARY KEY (stykkeID, gruppeNavn),
@@ -121,36 +121,30 @@ CREATE TABLE PrisForForestilling (
     FOREIGN KEY (gruppeNavn) REFERENCES Billettgruppe(gruppeNavn)
 );
 
-CREATE TABLE OppgaverIStykke (
-    oppgaveID INT,
-    stykkeID INT,
-    PRIMARY KEY (oppgaveID, stykkeID),
-    FOREIGN KEY (oppgaveID) REFERENCES Oppgave(oppgaveID),
-    FOREIGN KEY (stykkeID) REFERENCES Stykke(stykkeID)
-);
-
 CREATE TABLE FinnesIAkt (
-    stykkeID INT,
+    stykkeID VARCHAR(250),
     aktNr INT,
-    rolleID INT,
-    PRIMARY KEY (stykkeID, aktNr, rolleID),
+    navn VARCHAR(100),
+    PRIMARY KEY (stykkeID, aktNr, navn),
     FOREIGN KEY (aktNr) REFERENCES Akt(aktNr),
     FOREIGN KEY (stykkeID) REFERENCES Akt(stykkeID),
-    FOREIGN KEY (rolleID) REFERENCES Rolle(rolleID)
+    FOREIGN KEY (navn) REFERENCES Rolle(navn)
 );
 
 CREATE TABLE HarRolle (
     ansattID INT,
-    rolleID INT,
-    PRIMARY KEY (ansattID, rolleID),
+    navn VARCHAR(100),
+    PRIMARY KEY (ansattID, navn),
     FOREIGN KEY (ansattID) REFERENCES TeaterAnsatt(ansattID),
-    FOREIGN KEY (rolleID) REFERENCES Rolle(rolleID)
+    FOREIGN KEY (navn) REFERENCES Rolle(navn)
 );
 
 CREATE TABLE HarOppgave (
     ansattID INT,
-    oppgaveID INT,
-    PRIMARY KEY (ansattID, oppgaveID),
+    oppgaveNavn VARCHAR(100),
+    stykkeID VARCHAR(250),
+    PRIMARY KEY (ansattID, oppgaveNavn, stykkeID),
     FOREIGN KEY (ansattID) REFERENCES TeaterAnsatt(ansattID),
-    FOREIGN KEY (oppgaveID) REFERENCES Oppgave(oppgaveID)
+    FOREIGN KEY (oppgaveNavn) REFERENCES Oppgave(oppgaveNavn)
+    FOREIGN KEY (stykkeID) REFERENCES Oppgave(stykkeID)
 );
