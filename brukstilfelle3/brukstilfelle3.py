@@ -1,6 +1,9 @@
 import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
+with open("brukstilfelle3/brukstilfelle3.sql") as file:
+    sql_script = file.read()
+c.executescript(sql_script)
 
 def get_available_rows_having_amt_seats (what_show, when, min_available_seats):
     c.execute('''
