@@ -1,3 +1,4 @@
+import os
 import sqlite3
 
 def __init__():
@@ -6,8 +7,10 @@ def __init__():
     with open("src/brukstilfelle5/brukstilfelle5.sql") as file:
         sql_script = file.read()
     c.execute(sql_script)
-    queryResult = c.fetchall()
-    for i in queryResult:
-        print(i)
+    if os.path.exists('src/brukstilfelle5/resultat.txt'):
+        os.remove('src/brukstilfelle5/resultat.txt')
+    with open("src/brukstilfelle5/resultat.txt", "w") as file:
+        for i in c.fetchall():
+            file.write(str(i) + '\n')
     conn.commit()
     conn.close()

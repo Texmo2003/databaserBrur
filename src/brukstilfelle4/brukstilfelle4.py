@@ -1,11 +1,14 @@
+import os
 import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
 
 def __init__():
-    ting = get_all_forestillinger_on_date('2024-02-03')
-    for i in ting:
-        print(i)
+    if os.path.exists('src/brukstilfelle4/resultat.txt'):
+        os.remove('src/brukstilfelle4/resultat.txt')
+    with open("src/brukstilfelle4/resultat.txt", "w") as file:
+        for i in get_all_forestillinger_on_date('2024-02-03'):
+            file.write(str(i) + '\n')
     conn.commit()
     conn.close()
 
