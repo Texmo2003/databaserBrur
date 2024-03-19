@@ -1,11 +1,11 @@
 # TDT4145 Datamodellering og Databasesystemer - DB2
 
-All kode nødvendig for å kjøre databasen ligger i src.zip. For å kjøre databasen, pakk ut src.zip. Brukstilfeller 2 og 3 er implementert på en måte som forventer at Brukstilfelle 1, altså innsetting av data, er kjørt først. Dette er fordi brukstilfelle 2 og 3 forventer at det finnes data i databasen.
+All kode nødvendig for å kjøre databasen ligger i `src.zip`. For å kjøre brukstilfellene, pakk ut `src.zip` og kjør `main.py` som ligger i `src/` mappen. De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, siden brukstilfelle 1 er ansvarlig for all innsetting av data. Alle brukstilfellene blir kjørt i rekkefølge i `main.py`.
 
-For hvert brukstilfelle, kjører du `.py` filen i den tilhørende mappen.
+Om man ønsker å tømme databasen, kan man kjøre `initalizeDB.py`.
 
-- For brukstilfellene som krever input, følg instruksjonene i terminalen.
-- For brukstilfellene som gjør en spørring, så ligger resultatet av spørringen i en `resultat.txt` fil i mappen til brukstilfellet, og resultatet blir også printet i terminalen.
+- For brukstilfellene som krever input, altså brukstilfelle 4 og 7, så har vi allerede satt inn et eksempel på input i `main.py` filen, og kommentert linjene man kan endre om inputten ønskes å endres.
+- For brukstilfellene som gjør en spørring, så blir resultatet av spørringen satt i `resultat.txt` filen i mappen til brukstilfellet.
 
 ## Endringer
 
@@ -20,4 +20,5 @@ For hvert brukstilfelle, kjører du `.py` filen i den tilhørende mappen.
 - Antar at Guttorm Ingesson er Baard Bratte.
 - Antar at Trønder er med i akt 1
 - Antar at i brukstilfelle 3 så skal man legge inn en ordre på de 9 setene man har funnet, og at når det står "men du trenger ikke ta hensyn til selve betalingen, den antar vi skjer på et annet system som dere ikke trenger å lage", så betyr det at vi ikke trenger å lage en betalingsmodul og bry oss om transaksjoner og lignende.
+- Antar at i brukstilfelle 3 så er det ubetydelig hvilken rad som blir valgt, så da velger vi den første raden som oppfyller kravene.
 - Antar at i brukstilfelle 7 så printer man ut når to skuespillere har spilt i samme stykke, og skiller ikke på om skuespillerene spilte sammen i kun én akt eller i flere akter i samme stykke.

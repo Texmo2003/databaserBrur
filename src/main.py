@@ -10,9 +10,9 @@ def main():
     b1()
     b2()
     b3()
-    b4()
+    b4('2024-02-03') # Bytt ut datoen her om du vil teste med en annen dato
     b5()
     b6()
-    b7()
+    b7('Emil Olafsson') # Bytt ut navnet her om du vil teste med en annen skuespiller
 
 main()

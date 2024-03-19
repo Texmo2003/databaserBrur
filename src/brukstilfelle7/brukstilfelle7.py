@@ -3,11 +3,11 @@ import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
 
-def __init__():
+def __init__(navn):
     if os.path.exists('src/brukstilfelle7/resultat.txt'):
         os.remove('src/brukstilfelle7/resultat.txt')
     with open("src/brukstilfelle7/resultat.txt", "w") as file:
-        for i in get_colleagues('Emil Olafsson'):
+        for i in get_colleagues(navn):
             file.write(str(i) + '\n')
     conn.commit()
     conn.close()
