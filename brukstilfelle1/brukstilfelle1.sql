@@ -171,10 +171,10 @@ INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUE
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (10, 'Fabian Heidelberg Lunde', 'fhlunde@gmail.com', 'fast', 'Skuespiller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (11, 'Emil Olafsson', 'eolafsson@gmail.com', 'fast', 'Skuespiller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (12, 'Snorre Ryen Tøndel', 'srtondel@gmail.com', 'fast', 'Skuespiller');
-INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (13, 'Yury Butusov', 'ybutusov@gmail.com', 'fast', 'ResterendRoller');
+INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (13, 'Yury Butusov', 'ybutusov@gmail.com', 'fast', 'Resterende Roller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (14, 'Aleksandr Shishkin-Hokusai', 'ashokusai@gmail.com', 'fast', 'Resterende Roller');
-INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (15, 'Eivind Myren', 'emyren@gmail.com', 'fast', 'ResterendRoller');
-INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (16, 'Mina Rype Stokke', 'mrstokke@gmail.com', 'fast', 'ResterendRoller');
+INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (15, 'Eivind Myren', 'emyren@gmail.com', 'fast', 'Resterende Roller');
+INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (16, 'Mina Rype Stokke', 'mrstokke@gmail.com', 'fast', 'Resterende Roller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (17, 'Sunniva Du Mond Nordal', 'sdmnordal@gmail.com', 'fast', 'Skuespiller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (18, 'Jo Saberniak', 'jsaberniak@gmail.com', 'fast', 'Skuespiller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (19, 'Marte M. Steinholt', 'mmsteinholt@gmail.com', 'fast', 'Skuespiller');
@@ -184,7 +184,7 @@ INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUE
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (23, 'Åsmund Flaten', 'aaflaten@gmail.com', 'fast', 'Skuespiller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (24, 'Jonas Corell Petersen', 'jcpetersen@gmail.com', 'fast', 'Resterende Roller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (25, 'David Ghert', 'dghert@gmail.com', 'fast', 'Resterende Roller');
-INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (26, 'Gaute Tønder', 'gtonder@gmail.com', 'fast', 'resterendroller');
+INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (26, 'Gaute Tønder', 'gtonder@gmail.com', 'fast', 'Resterende Roller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (27, 'Magnus Mikaelsen', 'mmikaelsen@gmail.com', 'fast', 'Resterende Roller');
 INSERT INTO TeaterAnsatt (ansattID, navn, epost, ansattstatus, typeAnsatt) VALUES (28, 'Kristoffer Spender', 'kspender@gmail.com', 'fast', 'Resterende Roller');
 

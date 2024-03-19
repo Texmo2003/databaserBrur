@@ -15,23 +15,5 @@ ting = get_all_forestillinger_on_date('2024-02-03')
 for i in ting:
     print(i)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 conn.commit()
 conn.close()
