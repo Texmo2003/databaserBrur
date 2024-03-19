@@ -1,0 +1,2 @@
+SELECT DISTINCT FinnesIAkt.stykkeID, TeaterAnsatt.navn, FinnesIAkt.navn
+FROM (FinnesIAkt INNER JOIN HarRolle ON FinnesIAkt.navn = HarRolle.navn) AS RollerIStykker INNER JOIN TeaterAnsatt ON RollerIStykker.ansattID = TeaterAnsatt.ansattID
