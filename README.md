@@ -8,7 +8,9 @@ De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, 
 
 Om man ønsker å tømme databasen, kan man kjøre `initalizeDB.py`.
 
-- For brukstilfellene som krever input, altså brukstilfelle 4 og 7, så har vi allerede satt inn et eksempel på input i `main.py` filen, og kommentert linjene man kan endre om inputten ønskes å endres.
+- For brukstilfellene som krever input, altså brukstilfelle 4 og 7, så kommer det en input prompt i terminalen. Her er inputten vi brukte for å generere våre resultat:
+  - 2024-02-03
+  - Emil Olafsson
 - For brukstilfellene som gjør en spørring, så blir resultatet av spørringen satt i `resultat.txt` filen i mappen til brukstilfellet.
 
 ## Endringer

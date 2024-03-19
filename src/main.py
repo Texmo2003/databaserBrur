@@ -10,9 +10,9 @@ def main():
     b1()
     b2()
     b3()
-    b4('2024-02-03') # Bytt ut datoen her om du vil teste med en annen dato
+    b4(input("Sett inn dato for brukstilfelle 4 (Format: ÅÅÅÅ-MM-DD): "))
     b5()
     b6()
-    b7('Emil Olafsson') # Bytt ut navnet her om du vil teste med en annen skuespiller
+    b7(input("Sett inn navn på skuespiller for brukstilfelle 7: "))
 
 main()
