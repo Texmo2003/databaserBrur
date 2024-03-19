@@ -1,4 +1,4 @@
-# databaserBrur
+# TDT4145 Datamodellering og Databasesystemer - DB2
 
 Trenger en forklaring på hvordan man kjører databasen i python
 
@@ -15,3 +15,4 @@ Trenger en forklaring på hvordan man kjører databasen i python
 - Antar at Guttorm Ingesson er Baard Bratte.
 - Antar at Trønder er med i akt 1
 - Antar at i brukstilfelle 3 så skal man legge inn en ordre på de 9 setene man har funnet, og at når det står "men du trenger ikke ta hensyn til selve betalingen, den antar vi skjer på et annet system som dere ikke trenger å lage", så betyr det at vi ikke trenger å lage en betalingsmodul og bry oss om transaksjoner og lignende.
+- Antar at i brukstilfelle 7 så printer man ut når to skuespillere har spilt i samme stykke, og skiller ikke på om skuespillerene spilte sammen i kun én akt eller i flere akter i samme stykke.
