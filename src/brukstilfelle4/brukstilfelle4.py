@@ -1,6 +1,16 @@
+import os
 import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
+
+def __init__(dato):
+    if os.path.exists('src/brukstilfelle4/resultat.txt'):
+        os.remove('src/brukstilfelle4/resultat.txt')
+    with open("src/brukstilfelle4/resultat.txt", "w") as file:
+        for i in get_all_forestillinger_on_date(dato):
+            file.write(str(i) + '\n')
+    conn.commit()
+    conn.close()
 
 def get_all_forestillinger_on_date(date):
     c.execute('''
@@ -10,10 +20,3 @@ def get_all_forestillinger_on_date(date):
         GROUP BY Forestilling.stykkeID
     ''', (date, ))
     return c.fetchall()
-
-ting = get_all_forestillinger_on_date('2024-02-03')
-for i in ting:
-    print(i)
-
-conn.commit()
-conn.close()

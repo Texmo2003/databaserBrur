@@ -1,9 +1,19 @@
 import sqlite3
+import os
+
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
-with open("brukstilfelle3/brukstilfelle3.sql") as file:
-    sql_script = file.read()
-c.executescript(sql_script)
+
+def __init__ ():
+    if os.path.exists('src/brukstilfelle3/resultat.txt'):
+        os.remove('src/brukstilfelle3/resultat.txt')
+    with open("src/brukstilfelle3/brukstilfelle3.sql") as file:
+        sql_script = file.read()
+    c.executescript(sql_script)
+    with open("src/brukstilfelle3/resultat.txt", "w") as file:
+        file.write("Totalpris: " + str(get_total_price_when_ordering_amt_tickets_in_same_row("Størst av alt er kjærligheten", '2024-02-03', 9, "Ordinær")))
+    conn.commit()
+    conn.close()
 
 def get_available_rows_having_amt_seats (what_show, when, min_available_seats):
     c.execute('''
@@ -49,10 +59,6 @@ def order_tickets_for_forestilling (orderID, groupName, available_seats, amtTick
     c.execute("UPDATE Ordre SET antallBilletter = (SELECT COUNT(*) FROM Billett WHERE ordreID = ?) WHERE ordreID = ?", (orderID, orderID))
 
 def get_total_price_when_ordering_amt_tickets_in_same_row (stykkeID, forestillingDato, amtTicketsToOrder, groupName):
-    with open("brukstilfelle3/brukstilfelle3.sql") as file:
-        sql_script = file.read()
-    c.executescript(sql_script)
-
     available_rows = get_available_rows_having_amt_seats("Størst av alt er kjærligheten", '2024-02-03', 9)
 
     selected_row = available_rows[0]
@@ -67,8 +73,3 @@ def get_total_price_when_ordering_amt_tickets_in_same_row (stykkeID, forestillin
     total_price = get_total_price_for_all_tickets_of_same_type("Størst av alt er kjærligheten", 3, "Ordinær")
 
     return total_price
-
-get_total_price_when_ordering_amt_tickets_in_same_row("Størst av alt er kjærligheten", '2024-02-03', 9, "Ordinær")
-
-conn.commit()
-conn.close()
