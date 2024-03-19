@@ -13,7 +13,7 @@ For brukstilfellene som krever input, altså brukstilfelle 4 og 7, vil det komme
 - **Brukstilfelle 4**: 2024-02-03
 - **Brukstilfelle 7**: Emil Olafsson
 
-For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet. I tillegg, så har vi lagret en kopi av hvordan resultatene ble da vi kjørte [main.py](main.py). Dette ligger i den vedlagte `output/` mappen, slik at man enkelt kan sjekke om alt kjører som det skal.
+For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet. I tillegg, så har vi lagret en kopi av hvordan resultatene ble da vi kjørte [main.py](main.py). Dette ligger i den vedlagte `resultat_kopi.txt` filen, slik at man enkelt kan sjekke om alt kjører som det skal.
 
 ## Endringer fra DB1
 
