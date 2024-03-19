@@ -8,7 +8,7 @@ def __init__ ():
     c.executescript(sql_script)
 
     # Setter inn seter i Hovedscenen i Sete-tabellen og billetter for opptatte seter i Billett-tabellen
-    with open("filesNeeded/hovedscenen.txt") as file:
+    with open("src/filesNeeded/hovedscenen.txt") as file:
         omraade = "Parkett"
         radnr = 1
         stolnr = 0
@@ -30,7 +30,7 @@ def __init__ ():
         c.execute("UPDATE Ordre SET antallBilletter = ? WHERE ordreID = 1", (amtTickets,))
 
     # Setter inn seter i Gamle Scene i Sete-tabellen og billetter for opptatte seter i Billett-tabellen
-    with open("filesNeeded/gamle-scene.txt") as file:
+    with open("src/filesNeeded/gamle-scene.txt") as file:
         omraade = "Parkett"
         radnr = 1
         stolnr = 1
