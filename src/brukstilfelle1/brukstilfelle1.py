@@ -1,7 +1,7 @@
 import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
-with open("brukstilfelle1/brukstilfelle1.sql") as file:
+with open("src/brukstilfelle1/brukstilfelle1.sql") as file:
     sql_script = file.read()
 c.executescript(sql_script)
 

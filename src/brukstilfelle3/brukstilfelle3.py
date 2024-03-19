@@ -1,7 +1,7 @@
 import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
-with open("brukstilfelle3/brukstilfelle3.sql") as file:
+with open("src/brukstilfelle3/brukstilfelle3.sql") as file:
     sql_script = file.read()
 c.executescript(sql_script)
 
@@ -49,10 +49,6 @@ def order_tickets_for_forestilling (orderID, groupName, available_seats, amtTick
     c.execute("UPDATE Ordre SET antallBilletter = (SELECT COUNT(*) FROM Billett WHERE ordreID = ?) WHERE ordreID = ?", (orderID, orderID))
 
 def get_total_price_when_ordering_amt_tickets_in_same_row (stykkeID, forestillingDato, amtTicketsToOrder, groupName):
-    with open("brukstilfelle3/brukstilfelle3.sql") as file:
-        sql_script = file.read()
-    c.executescript(sql_script)
-
     available_rows = get_available_rows_having_amt_seats("Størst av alt er kjærligheten", '2024-02-03', 9)
 
     selected_row = available_rows[0]
