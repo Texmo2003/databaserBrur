@@ -1,6 +1,11 @@
 # TDT4145 Datamodellering og Databasesystemer - DB2
 
-Trenger en forklaring på hvordan man kjører databasen i python
+All kode nødvendig for å kjøre databasen ligger i src.zip. For å kjøre databasen, pakk ut src.zip. Brukstilfeller 2 og 3 er implementert på en måte som forventer at Brukstilfelle 1, altså innsetting av data, er kjørt først. Dette er fordi brukstilfelle 2 og 3 forventer at det finnes data i databasen.
+
+For hvert brukstilfelle, kjører du `.py` filen i den tilhørende mappen.
+
+- For brukstilfellene som krever input, følg instruksjonene i terminalen.
+- For brukstilfellene som gjør en spørring, så ligger resultatet av spørringen i en `resultat.txt` fil i mappen til brukstilfellet, og resultatet blir også printet i terminalen.
 
 ## Endringer
 

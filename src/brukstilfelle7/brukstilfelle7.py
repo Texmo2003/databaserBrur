@@ -2,6 +2,13 @@ import sqlite3
 conn = sqlite3.connect('teater.db')
 c = conn.cursor()
 
+def __init__():
+    ting = get_colleagues('Emil Olafsson')
+    for i in ting:
+        print(i)
+    conn.commit()
+    conn.close()
+
 def get_colleagues(who):
     c.execute('''
         SELECT DISTINCT AkterMedI.navn, Kollega.navn, FinnesIAkt.stykkeID
@@ -13,10 +20,3 @@ def get_colleagues(who):
         WHERE Kollega.navn <> AkterMedI.navn
     ''', (who,))
     return c.fetchall()
-
-ting = get_colleagues('Emil Olafsson')
-for i in ting:
-    print(i)
-
-conn.commit()
-conn.close()
