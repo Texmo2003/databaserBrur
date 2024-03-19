@@ -6,14 +6,14 @@ Det er viktig at [teater.db](../teater.db) ligger i samme rotmappe som `src/` ma
 
 De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, da brukstilfelle 1 er ansvarlig for all innsetting av data. Alle brukstilfellene blir kjørt i rekkefølge i [main.py](main.py), så ved å kjøre [main.py](main.py), vil alle brukstilfellene bli kjørt i riktig rekkefølge.
 
-Om man ønsker å tømme databasen, kan man kjøre [initalizeDB.py](initalizeDB.py).
+Om man ønsker å tømme innholdet databasen, kan man kjøre [initalizeDB.py](initalizeDB.py).
 
 For brukstilfellene som krever input, altså brukstilfelle 4 og 7, vil det komme en input prompt i terminalen. Her er inputten vi brukte for å generere våre resultat:
 
 - **Brukstilfelle 4**: 2024-02-03
 - **Brukstilfelle 7**: Emil Olafsson
 
-For brukstilfellene som gjør en spørring, blir resultatet av spørringen satt i `resultat.txt` filen i mappen til brukstilfellet. I tillegg, så har vi lagret et kopi av hvordan resultatene ble når vi kjørte [main.py](main.py). Dette ligger i `output/` mappen, slik at man enkelt kan sjekke om alt kjører som det skal.
+For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet. I tillegg, så har vi lagret en kopi av hvordan resultatene ble da vi kjørte [main.py](main.py). Dette ligger i den vedlagte `output/` mappen, slik at man enkelt kan sjekke om alt kjører som det skal.
 
 ## Endringer fra DB1
 
