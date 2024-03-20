@@ -9,7 +9,7 @@ De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, 
 
 Om det er ønskelig å tømme innholdet i databasen, men fortsatt beholde skjemaene/tabellene, kan man kjøre [initalizeDB.py](initalizeDB.py) på nytt.
 
-For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet.
+For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `output/` mappen i en `.txt` fil med navn som tilsvarer brukstilfellet.
 
 ## Forventet resultat fra hver spørring
 
@@ -23,7 +23,7 @@ For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen l
 
 ### Brukstilfelle 4
 
-**Sett inn dato for brukstilfelle 4 (Format: ÅÅÅÅ-MM-DD):** `2024-02-03`
+Sett inn dato for brukstilfelle 4 (Format: ÅÅÅÅ-MM-DD): `2024-02-03`
 
 ```
 (StykkeID, AntallBilletter)
@@ -82,7 +82,7 @@ For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen l
 
 ### Brukstilfelle 7
 
-**Sett inn navn på skuespiller for brukstilfelle 7:** `Emil Olafsson`
+Sett inn navn på skuespiller for brukstilfelle 7: `Emil Olafsson`
 
 ```
 (Skuespillers navn, Kollegas navn, StykkeID)

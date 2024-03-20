@@ -4,9 +4,9 @@ conn = sqlite3.connect('teater.db')
 c = conn.cursor()
 
 def __init__(navn):
-    if os.path.exists('brukstilfelle7/resultat.txt'):
-        os.remove('brukstilfelle7/resultat.txt')
-    with open("brukstilfelle7/resultat.txt", "w") as file:
+    if os.path.exists('output/brukstilfelle7.txt'):
+        os.remove('output/brukstilfelle7.txt')
+    with open("output/brukstilfelle7.txt", "w") as file:
         file.write("(Skuespillers navn, Kollegas navn, StykkeID)\n")
         file.write("--------------------------------------------------\n")
         for i in get_colleagues(navn):
