@@ -1,12 +1,13 @@
 # TDT4145 Datamodellering og Databasesystemer - DB2
 
-All kode nødvendig for å kjøre databasen ligger i [src.zip](../src.zip). For å kjøre brukstilfellene, pakk ut [src.zip](../src.zip) og kjør [main.py](main.py) som ligger i `src/` mappen.
+All kode nødvendig for å kjøre databasen ligger i [src.zip](../src.zip).
+For å initialisere databasen, pakk ut [src.zip](../src.zip) og kjør [initalizeDB.py](initalizeDB.py). For å kjøre brukstilfellene, kjør [main.py](main.py) som ligger i `src/` mappen.
 
 Det er viktig at [teater.db](../teater.db) ligger i samme rotmappe som `src/` mappen. [teater.db](../teater.db) skal altså **ikke** ligge i `src/` mappen, men 'ved siden av'.
 
 De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, da brukstilfelle 1 er ansvarlig for all innsetting av data. Alle brukstilfellene blir kjørt i rekkefølge i [main.py](main.py), så ved å kjøre [main.py](main.py), vil alle brukstilfellene bli kjørt i riktig rekkefølge.
 
-Om man ønsker å tømme innholdet databasen, kan man kjøre [initalizeDB.py](initalizeDB.py).
+Om det er ønskelig å tømme innholdet i databasen, kan man kjøre [initalizeDB.py](initalizeDB.py).
 
 For brukstilfellene som krever input, altså brukstilfelle 4 og 7, vil det komme en input prompt i terminalen. Her er inputten vi brukte for å generere våre resultat:
 
@@ -25,6 +26,7 @@ For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen l
 
 ## Antagelser
 
+- Med 'skal være tom' tolker vi det til å mene at det ikke skal være noen kolonner, tabeller, eller noe som helst i `.db` filen.
 - Guttorm Ingesson er Baard Bratte
   - Dette antar vi fordi Guttorm Ingesson fra vedlegget 'Akter og roller i Kongsemnene', ikke ble funnet på [nettsiden til stykket](https://www.trondelag-teater.no/forestillinger/kongsemnene), og Baard Bratte fra nettsiden til stykket ikke ble funnet i vedlegget 'Akter og roller i Kongsemnene'.
 - Trønder er med i akt 1
