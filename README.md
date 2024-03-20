@@ -1,4 +1,22 @@
+<!-- omit in toc -->
+
 # TDT4145 Datamodellering og Databasesystemer - DB2
+
+<!-- omit in toc -->
+
+### Innholdsfortegnelse
+
+- [Hvordan kjøre databasen](#hvordan-kjøre-databasen)
+- [Resultat fra hver spørring](#resultat-fra-hver-spørring)
+  - [Brukstilfelle 3](#brukstilfelle-3)
+  - [Brukstilfelle 4](#brukstilfelle-4)
+  - [Brukstilfelle 5](#brukstilfelle-5)
+  - [Brukstilfelle 6](#brukstilfelle-6)
+  - [Brukstilfelle 7](#brukstilfelle-7)
+- [Endringer fra DB1](#endringer-fra-db1)
+- [Antagelser](#antagelser)
+
+## Hvordan kjøre databasen
 
 For å initialisere databasen, kjør [initalizeDB.py](initalizeDB.py). For å kjøre brukstilfellene, kjør [main.py](main.py). For brukstilfellene som krever input, altså brukstilfelle 4 og 7, vil det komme en input prompt i terminalen. Her er inputten vi brukte for å generere våre resultat:
 
@@ -9,9 +27,9 @@ De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, 
 
 Om det er ønskelig å tømme innholdet i databasen, men fortsatt beholde skjemaene/tabellene, kan man kjøre [initalizeDB.py](initalizeDB.py) på nytt.
 
-For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `output/` mappen i en `.txt` fil med navn som tilsvarer brukstilfellet.
+## Resultat fra hver spørring
 
-## Forventet resultat fra hver spørring
+For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `output/` mappen i en `.txt` fil med navn som tilsvarer brukstilfellet. Her er en kopi av resultatet fra hver spørring:
 
 ### Brukstilfelle 3
 
