@@ -9,7 +9,92 @@ De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, 
 
 Om det er ønskelig å tømme innholdet i databasen, men fortsatt beholde skjemaene/tabellene, kan man kjøre [initalizeDB.py](initalizeDB.py) på nytt.
 
-For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet. I tillegg, så har vi lagret en kopi av hvordan hvert resultat ble da vi kjørte [main.py](main.py). Dette ligger i `forventetResultat/` mappen, slik at man enkelt kan sjekke om alt kjører som det skal.
+For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet.
+
+## Forventet resultat fra hver spørring
+
+### Brukstilfelle 3
+
+```
+(TotalPris)
+--------------------------------------------------
+3150
+```
+
+### Brukstilfelle 4
+
+```
+(StykkeID, AntallBilletter)
+--------------------------------------------------
+('Kongsemnene', 65)
+('Størst av alt er kjærligheten', 36)
+```
+
+### Brukstilfelle 5
+
+```
+(StykkeID, Skuespillers navn, Rolle)
+--------------------------------------------------
+('Kongsemnene', 'Arturo Scotti', 'Haakon Haakonssønn')
+('Kongsemnene', 'Ingunn Beate Strige Øyen', 'Inga fra Vartejg (Haakons mor)')
+('Kongsemnene', 'Hans Petter Nilsen', 'Skule jarl')
+('Kongsemnene', 'Madeleine Brandtzæg Nilsen', 'Fru Ragnhild (Skules hustru)')
+('Kongsemnene', 'Synnøve Fossum Eriksen', 'Margrete (Skules datter)')
+('Kongsemnene', 'Emma Caroline Deichmann', 'Sigrid (Skules søster)')
+('Kongsemnene', 'Emma Caroline Deichmann', 'Ingebjørg')
+('Kongsemnene', 'Thomas Jensen Takyi', 'Biskop Nikolas')
+('Kongsemnene', 'Per Bogstad Gulliksen', 'Gregorius Jonssønn')
+('Kongsemnene', 'Isak Holmen Sørensen', 'Pål Flida')
+('Kongsemnene', 'Isak Holmen Sørensen', 'Trønder')
+('Kongsemnene', 'Fabian Heidelberg Lunde', 'Baard Bratte')
+('Kongsemnene', 'Fabian Heidelberg Lunde', 'Trønder')
+('Kongsemnene', 'Emil Olafsson', 'Jatgeir Skald')
+('Kongsemnene', 'Emil Olafsson', 'Dagfinn Bonde')
+('Kongsemnene', 'Snorre Ryen Tøndel', 'Peter (prest og Ingebjørgs sønn)')
+('Størst av alt er kjærligheten', 'Sunniva Du Mond Nordal', 'Sunniva Du Mond Nordal')
+('Størst av alt er kjærligheten', 'Jo Saberniak', 'Jo Saberniak')
+('Størst av alt er kjærligheten', 'Marte M. Steinholt', 'Marte M. Steinholt')
+('Størst av alt er kjærligheten', 'Tor Ivar Hagen', 'Tor Ivar Hagen')
+('Størst av alt er kjærligheten', 'Trond-Ove Skrødal', 'Trond-Ove Skrødal')
+('Størst av alt er kjærligheten', 'Natalie Grøndahl Tangen', 'Natalie Grøndahl Tangen')
+('Størst av alt er kjærligheten', 'Åsmund Flaten', 'Åsmund Flaten')
+```
+
+### Brukstilfelle 6
+
+```
+(StykkeID, Dato, AntallBilletterSolgt)
+--------------------------------------------------
+('Kongsemnene', '2024-02-03', 65)
+('Størst av alt er kjærligheten', '2024-02-03', 36)
+('Kongsemnene', '2024-02-01', 0)
+('Kongsemnene', '2024-02-02', 0)
+('Kongsemnene', '2024-02-05', 0)
+('Kongsemnene', '2024-02-06', 0)
+('Størst av alt er kjærligheten', '2024-02-06', 0)
+('Størst av alt er kjærligheten', '2024-02-07', 0)
+('Størst av alt er kjærligheten', '2024-02-12', 0)
+('Størst av alt er kjærligheten', '2024-02-13', 0)
+('Størst av alt er kjærligheten', '2024-02-14', 0)
+```
+
+### Brukstilfelle 7
+
+```
+(Skuespillers navn, Kollegas navn, StykkeID)
+--------------------------------------------------
+('Emil Olafsson', 'Arturo Scotti', 'Kongsemnene')
+('Emil Olafsson', 'Ingunn Beate Strige Øyen', 'Kongsemnene')
+('Emil Olafsson', 'Hans Petter Nilsen', 'Kongsemnene')
+('Emil Olafsson', 'Madeleine Brandtzæg Nilsen', 'Kongsemnene')
+('Emil Olafsson', 'Synnøve Fossum Eriksen', 'Kongsemnene')
+('Emil Olafsson', 'Emma Caroline Deichmann', 'Kongsemnene')
+('Emil Olafsson', 'Thomas Jensen Takyi', 'Kongsemnene')
+('Emil Olafsson', 'Per Bogstad Gulliksen', 'Kongsemnene')
+('Emil Olafsson', 'Isak Holmen Sørensen', 'Kongsemnene')
+('Emil Olafsson', 'Fabian Heidelberg Lunde', 'Kongsemnene')
+('Emil Olafsson', 'Snorre Ryen Tøndel', 'Kongsemnene')
+```
 
 ## Endringer fra DB1
 
