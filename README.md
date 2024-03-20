@@ -1,9 +1,6 @@
 # TDT4145 Datamodellering og Databasesystemer - DB2
 
-All kode nødvendig for å kjøre databasen ligger i [src.zip](../src.zip).
-For å initialisere databasen, pakk ut [src.zip](../src.zip) og kjør [initalizeDB.py](initalizeDB.py). For å kjøre brukstilfellene, kjør [main.py](main.py) som ligger i `src/` mappen.
-
-Det er viktig at [teater.db](../teater.db) ligger i samme rotmappe som `src/` mappen. [teater.db](../teater.db) skal altså **ikke** ligge i `src/` mappen, men 'ved siden av'.
+For å initialisere databasen, kjør [initalizeDB.py](initalizeDB.py). For å kjøre brukstilfellene, kjør [main.py](main.py).
 
 De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, da brukstilfelle 1 er ansvarlig for all innsetting av data. Alle brukstilfellene blir kjørt i rekkefølge i [main.py](main.py), så ved å kjøre [main.py](main.py), vil alle brukstilfellene bli kjørt i riktig rekkefølge.
 

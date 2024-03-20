@@ -5,12 +5,12 @@ conn = sqlite3.connect('teater.db')
 c = conn.cursor()
 
 def __init__ ():
-    if os.path.exists('src/brukstilfelle3/resultat.txt'):
-        os.remove('src/brukstilfelle3/resultat.txt')
-    with open("src/brukstilfelle3/brukstilfelle3.sql") as file:
+    if os.path.exists('brukstilfelle3/resultat.txt'):
+        os.remove('brukstilfelle3/resultat.txt')
+    with open("brukstilfelle3/brukstilfelle3.sql") as file:
         sql_script = file.read()
     c.executescript(sql_script)
-    with open("src/brukstilfelle3/resultat.txt", "w") as file:
+    with open("brukstilfelle3/resultat.txt", "w") as file:
         file.write("Totalpris: " + str(get_total_price_when_ordering_amt_tickets_in_same_row("Størst av alt er kjærligheten", '2024-02-03', 9, "Ordinær")))
     conn.commit()
     conn.close()
