@@ -23,6 +23,8 @@ For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen l
 
 ### Brukstilfelle 4
 
+**Sett inn dato for brukstilfelle 4 (Format: ÅÅÅÅ-MM-DD):** `2024-02-03`
+
 ```
 (StykkeID, AntallBilletter)
 --------------------------------------------------
@@ -79,6 +81,8 @@ For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen l
 ```
 
 ### Brukstilfelle 7
+
+**Sett inn navn på skuespiller for brukstilfelle 7:** `Emil Olafsson`
 
 ```
 (Skuespillers navn, Kollegas navn, StykkeID)
