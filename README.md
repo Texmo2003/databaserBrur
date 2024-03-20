@@ -2,6 +2,8 @@
 
 # TDT4145 Datamodellering og Databasesystemer - DB2
 
+Gruppemedlemmer: Ola Munthe Vassbotn, Karl Theodor Ladegård Beck, Jørgen Texmo Grønn
+
 <!-- omit in toc -->
 
 ### Innholdsfortegnelse
