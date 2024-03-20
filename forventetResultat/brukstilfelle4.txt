@@ -1,0 +1,4 @@
+(StykkeID, AntallBilletter)
+--------------------------------------------------
+('Kongsemnene', 65)
+('Størst av alt er kjærligheten', 36)

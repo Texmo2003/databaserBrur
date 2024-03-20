@@ -10,6 +10,8 @@ def __init__():
     if os.path.exists('brukstilfelle5/resultat.txt'):
         os.remove('brukstilfelle5/resultat.txt')
     with open("brukstilfelle5/resultat.txt", "w") as file:
+        file.write("(StykkeID, Skuespillers navn, Rolle)\n")
+        file.write("--------------------------------------------------\n")
         for i in c.fetchall():
             file.write(str(i) + '\n')
     conn.commit()

@@ -11,7 +11,9 @@ def __init__ ():
         sql_script = file.read()
     c.executescript(sql_script)
     with open("brukstilfelle3/resultat.txt", "w") as file:
-        file.write("Totalpris: " + str(get_total_price_when_ordering_amt_tickets_in_same_row("Størst av alt er kjærligheten", '2024-02-03', 9, "Ordinær")))
+        file.write("(TotalPris)\n")
+        file.write("--------------------------------------------------\n")
+        file.write(str(get_total_price_when_ordering_amt_tickets_in_same_row("Størst av alt er kjærligheten", '2024-02-03', 9, "Ordinær")))
     conn.commit()
     conn.close()
 

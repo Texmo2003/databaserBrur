@@ -1,0 +1,13 @@
+(StykkeID, Dato, AntallBilletterSolgt)
+--------------------------------------------------
+('Kongsemnene', '2024-02-03', 65)
+('Størst av alt er kjærligheten', '2024-02-03', 36)
+('Kongsemnene', '2024-02-01', 0)
+('Kongsemnene', '2024-02-02', 0)
+('Kongsemnene', '2024-02-05', 0)
+('Kongsemnene', '2024-02-06', 0)
+('Størst av alt er kjærligheten', '2024-02-06', 0)
+('Størst av alt er kjærligheten', '2024-02-07', 0)
+('Størst av alt er kjærligheten', '2024-02-12', 0)
+('Størst av alt er kjærligheten', '2024-02-13', 0)
+('Størst av alt er kjærligheten', '2024-02-14', 0)

@@ -11,6 +11,8 @@ def __init__():
         sql_script = file.read()
     c.execute(sql_script)
     with open("brukstilfelle6/resultat.txt", "w") as file:
+        file.write("(StykkeID, Dato, AntallBilletterSolgt)\n")
+        file.write("--------------------------------------------------\n")
         queryResult = c.fetchall()
         for i in queryResult:
             file.write(str(i) + '\n')

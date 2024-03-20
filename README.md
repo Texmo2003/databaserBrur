@@ -1,17 +1,15 @@
 # TDT4145 Datamodellering og Databasesystemer - DB2
 
-For å initialisere databasen, kjør [initalizeDB.py](initalizeDB.py). For å kjøre brukstilfellene, kjør [main.py](main.py).
-
-De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, da brukstilfelle 1 er ansvarlig for all innsetting av data. Alle brukstilfellene blir kjørt i rekkefølge i [main.py](main.py), så ved å kjøre [main.py](main.py), vil alle brukstilfellene bli kjørt i riktig rekkefølge.
-
-Om det er ønskelig å tømme innholdet i databasen, kan man kjøre [initalizeDB.py](initalizeDB.py).
-
-For brukstilfellene som krever input, altså brukstilfelle 4 og 7, vil det komme en input prompt i terminalen. Her er inputten vi brukte for å generere våre resultat:
+For å initialisere databasen, kjør [initalizeDB.py](initalizeDB.py). For å kjøre brukstilfellene, kjør [main.py](main.py). For brukstilfellene som krever input, altså brukstilfelle 4 og 7, vil det komme en input prompt i terminalen. Her er inputten vi brukte for å generere våre resultat:
 
 - **Brukstilfelle 4**: 2024-02-03
 - **Brukstilfelle 7**: Emil Olafsson
 
-For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet. I tillegg, så har vi lagret en kopi av hvordan resultatene ble da vi kjørte [main.py](main.py). Dette ligger i den vedlagte `resultat_kopi.txt` filen, slik at man enkelt kan sjekke om alt kjører som det skal.
+De fleste brukstilfellene er avhengig av at brukstilfelle 1 blir kjørt først, da brukstilfelle 1 er ansvarlig for all innsetting av data. Alle brukstilfellene blir kjørt i rekkefølge i [main.py](main.py), så om man bare forholder seg til [main.py](main.py) burde alt fungere som forventet.
+
+Om det er ønskelig å tømme innholdet i databasen, men fortsatt beholde skjemaene/tabellene, kan man kjøre [initalizeDB.py](initalizeDB.py) på nytt.
+
+For hvert brukstilfelle som gjør en spørring, blir resultatet av spørringen lagret i `resultat.txt` i samme mappe som brukstilfellet. I tillegg, så har vi lagret en kopi av hvordan hvert resultat ble da vi kjørte [main.py](main.py). Dette ligger i `forventetResultat/` mappen, slik at man enkelt kan sjekke om alt kjører som det skal.
 
 ## Endringer fra DB1
 
